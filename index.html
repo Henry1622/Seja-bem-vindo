@@ -3,41 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo(a)</title>
+    <title>Bem-vindo(a) ao Nosso Espaço!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Estilo para o fundo com gradiente */
         body {
-            background-color: lightblue; /* Define a cor de fundo como azul celeste */
-            display: flex; /* Usa flexbox para centralizar o conteúdo */
-            flex-direction: column; /* Organiza os itens em coluna */
-            justify-content: center; /* Centraliza verticalmente */
-            align-items: center; /* Centraliza horizontalmente */
-            height: 100vh; /* Define a altura do corpo como 100% da altura da viewport */
-            margin: 0; /* Remove a margem padrão do body */
-            font-family: sans-serif; /* Define uma fonte simples */
-            color: #333; /* Define a cor do texto padrão */
-            text-align: center; /* Centraliza o texto */
+            background: linear-gradient(to right, #6dd5fa, #2980b9); /* Gradiente azul suave */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Garante que a altura mínima seja 100% da viewport */
+            margin: 0;
+            font-family: 'Arial', sans-serif; /* Muda a fonte para algo mais comum */
+            color: #fff; /* Define a cor do texto para branco para contrastar com o fundo */
+            text-align: center;
+            padding: 20px; /* Adiciona um padding geral */
+        }
+
+        /* Estilo para o conteúdo principal */
+        .content {
+            max-width: 800px; /* Limita a largura do conteúdo */
+            padding: 30px; /* Aumenta o padding */
+            background-color: rgba(0, 0, 0, 0.4); /* Um fundo mais escuro e transparente para o conteúdo */
+            border-radius: 10px; /* Cantos arredondados */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais proeminente */
         }
 
         h1 {
-            margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+            font-size: 3em; /* Aumenta o tamanho do título */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
         }
 
-        a {
-            color: #c4302b; /* Cor que lembra o YouTube */
-            text-decoration: none; /* Remove o sublinhado padrão do link */
-            font-size: 1.2em; /* Aumenta um pouco o tamanho da fonte */
-            transition: color 0.3s ease; /* Adiciona uma transição suave na cor */
+        p {
+            font-size: 1.2em; /* Aumenta o tamanho do parágrafo */
+            margin-bottom: 40px; /* Aumenta o espaço abaixo do parágrafo */
+            line-height: 1.6; /* Melhora a legibilidade do parágrafo */
         }
 
-        a:hover {
-            color: #ff0000; /* Muda para um vermelho mais vibrante ao passar o mouse */
-            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        /* Container para os botões de vídeo */
+        .video-links {
+            display: flex;
+            flex-direction: column; /* Empilha os links verticalmente */
+            gap: 15px; /* Espaço entre os botões */
+            margin-top: 20px;
+        }
+
+        /* Estilo para cada link/botão de vídeo */
+        .video-button {
+            display: inline-block; /* Permite definir padding e margin */
+            background-color: #ff0000; /* Cor do YouTube */
+            color: white; /* Texto branco */
+            padding: 12px 25px; /* Padding interno */
+            border-radius: 5px; /* Cantos arredondados */
+            text-decoration: none; /* Remove sublinhado */
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Transição suave */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave nos botões */
+        }
+
+        .video-button:hover {
+            background-color: #cc0000; /* Cor mais escura ao passar o mouse */
+            transform: translateY(-2px); /* Efeito de "levantar" */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte ao passar o mouse */
+        }
+
+        .video-item {
+            margin-bottom: 10px; /* Espaço entre a descrição e o botão */
+        }
+
+        .video-item p {
+            font-size: 1em; /* Tamanho da fonte para a descrição do vídeo */
+            margin-bottom: 5px; /* Espaço entre a descrição e o botão */
+            color: #eee; /* Cor mais clara para a descrição */
         }
     </style>
 </head>
 <body>
 
-    <h1>seja bem vindo(a)</h1> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Assista a um vídeo inspirador!</a>
+    <div class="content">
+        <h1>Seja Bem-vindo(a)!</h1> <p>
+            Estamos felizes em ter você aqui. Explore nosso espaço e descubra coisas interessantes.
+            Esperamos que sua visita seja agradável! Confira alguns vídeos legais:
+        </p>
+
+        <div class="video-links">
+            <div class="video-item">
+                <p>Assista a um vídeo engraçado:</p>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-button" target="_blank">
+                    Vídeo Engraçado!
+                </a>
+            </div>
+
+            <div class="video-item">
+                <p>Encontre inspiração:</p>
+                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-button" target="_blank">
+                    Vídeo Inspirador!
+                </a>
+            </div>
+
+            <div class="video-item">
+                <p>Aprenda algo novo:</p>
+                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-button" target="_blank">
+                    Vídeo Educativo!
+                </a>
+            </div>
+
+            </div>
+    </div>
 
 </body>
 </html>
